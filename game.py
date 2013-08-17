@@ -14,9 +14,10 @@ STARTING_MONEY = 100
 
 
 if len(sys.argv) != 3:
-	print("Usage: %s player1_module player2_module", sys.argv[0])
-	sys.exit(1)
-
+	# print("Usage: %s player1_module player2_module", sys.argv[0])
+    sys.argv.append("dumbplayer.py")
+    sys.argv.append("repelSelfPlayer.py")
+	# sys.exit(1)
 
 if sys.argv[1].endswith(".py"):
     exec('from %s import Player as Player1' % sys.argv[1][:-3])
